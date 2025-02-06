@@ -1,0 +1,7 @@
+<div class="surf-spot-card">
+    <h2>{{name}}</h2>
+    <p>Pays : {{location}}</p>
+    <img [src]="imageUrl" [alt]="name"/>
+    <p>{{description}}</p>
+    <p><button (click)="onLike()">{{buttonLabel}}</button>{{like}}</p>
+</div>
