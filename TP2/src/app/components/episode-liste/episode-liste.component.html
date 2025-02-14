@@ -1,0 +1,5 @@
+<div>
+    <ng-container *ngFor="let ep of episodes">
+        <app-episode *ngIf="ep.rate > 8.5" [episode]="ep"></app-episode>
+    </ng-container>
+</div>

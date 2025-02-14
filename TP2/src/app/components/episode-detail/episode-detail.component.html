@@ -1,0 +1,16 @@
+<div class="episode" [ngClass]="{episodeLike: likeText == 'Dislike'}">
+    <button>Retour</button>
+    <h3>{{episode.title | fullcap}}</h3>
+    <p>{{episode.ryear | date: 'YYYY'}} . {{episode.length | number: '1.0-0'}} mins . note IMDb : {{episode.rate | number: '1.0-1'}}/10
+        <span *ngIf="episode.userNote !== undefined"> .
+            <span [ngStyle]="{color: (episode.userNote >= 3) ? 'rgb(0, 0, 255)' : 'rgb(0, 0, 0)'}">
+                <em>Note spectateurs&nbsp;: </em>{{episode.userNote | userNoteTransform}}/5
+            </span>
+        </span>
+    </p>
+    <img [src]="episode.imageUrl" [alt]="episode.title"/>
+    <p>{{episode.synopsis}}</p>
+    <p><strong>Réalisateur&nbsp;:</strong> {{episode.director}}</p>
+    <p><strong>Acteurs&nbsp;:</strong> {{episode.casting}}</p>
+    <p><button>{{likeText}}</button>👍{{episode.like}}</p>
+</div>

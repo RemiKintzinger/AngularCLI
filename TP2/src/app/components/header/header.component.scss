@@ -1,0 +1,32 @@
+header {
+    background-color: #d0d0d0;
+    padding-bottom: 15px;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        font-weight: bold;
+    }
+
+    h1 {
+        font-weight: bolder;
+        font-size: 30px;
+        text-align: center;
+        padding: 30px;
+
+        a:hover {
+            font-weight: bolder;
+        }
+    }
+    
+    ul {
+        justify-content: center;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        padding: 0px;
+    }
+}
